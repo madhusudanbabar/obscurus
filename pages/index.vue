@@ -1,8 +1,8 @@
 <template>
   <v-container fluid>
     <v-row justify="space-around" class="bg">
-      <v-col justify="center">
-        <nullIntro></nullIntro>
+      <v-col justify="center" class="xs12">
+        <null-intro />
       </v-col>
     </v-row>
 
@@ -40,13 +40,13 @@ export default {
 </script>
 
 <style lang="scss">
-.bg {
-  background-image: linear-gradient(
-      360-135deg,
-      rgba(cyan, 0.7),
-      rgba(purple, 0.5)
-    ),
-    url("../assets/images/bg.jpg");
+.bg  {
+  // background-image: linear-gradient(
+  //     360-135deg,
+  //     rgba(cyan, 0.9),
+  //     rgba(purple, 0.5)
+  //   ),
+  //   url("../assets/images/bg.jpg");
   background-size: cover;
   background-position: center;
 }
