@@ -15,13 +15,13 @@
             class="k-nav__link d-flex align-center px-4 py-4"
             :class="link.class ? link.class : ''"
           >
-            <v-icon class="mr-2" color="black" dark>mdi-{{ link.icon }}</v-icon>
+            <!-- <v-icon class="mr-2" color="gray" dark>mdi-{{ link.icon }}</v-icon> -->
             {{ link.name }}
           </nuxt-link>
           <ul class="k-nav__menu--sub" v-if="link.submenu">
             <li class="k-nav__item--sub" v-for="(sub, index) in link.submenu" :key="index">
               <nuxt-link class="k-nav__link--sub d-flex align-center px-4 py-4" :to="sub.path">
-                <v-icon class="mr-2" color="black" dark>mdi-{{ sub.icon }}</v-icon>
+                <!-- <v-icon class="mr-2" color="white" dark>mdi-{{ sub.icon }}</v-icon> -->
                 {{ sub.name }}
               </nuxt-link>
             </li>
@@ -49,15 +49,9 @@ export default Vue.extend({
       },
       links: [
         {
-          name: "Upcoming events",
+          name: "events",
           path: "/events",
           icon: "calendar-month",
-          class: ""
-        },
-        {
-          name: "Archive",
-          path: "",
-          icon: "archive",
           class: "k-nav__items--archive",
           styleItem: {
             position: "relative"
@@ -113,12 +107,6 @@ export default Vue.extend({
           icon: "account",
           class: "ml-4"
         },
-
-        {
-          name: "about",
-          path: "",
-          icon: "book-open mdi-rotate-315"
-        }
       ]
     };
   }
@@ -128,12 +116,12 @@ export default Vue.extend({
 .sticky {
   position: sticky;
   top: 0;
-  background-color: $color-secondary;
+  background-color: transparent;
   z-index: 1;
   box-shadow: 0px 2px 5px black;
 }
 .brand {
-  color: black !important;
+  color: white !important;
   text-decoration: none;
   font-size: 2.5rem;
   font-weight: 400;
@@ -175,7 +163,7 @@ export default Vue.extend({
 
   &__link,
   &__link--sub {
-    color: black !important;
+    color: white !important;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease-in;
